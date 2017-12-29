@@ -1,0 +1,27 @@
+<!-- <div class="card">
+<div class="cardHeader">
+{{name}}
+</div>
+<div class="cardBody">
+
+Date : {{date}} <br />
+Duration : {{duration}} minutes <br />
+Status : {{status}} <br />
+
+<button type="button" name="button" ng-click="takeAssessment(id)" ng-show="showTakeAssessment(rawDate)">Take assessment</button>
+</div>
+</div> -->
+
+<div class="panel panel-info ">
+	<div class="panel-heading text-center" style="font-size: 18px; font-weight:500;">{{name}}</div>
+	<div class="panel-body" style="font-size: 15px;">
+		<div style="width: 80%; margin-left:10%;">
+			<p><b>Exam Date:</b>&nbsp;&nbsp;&nbsp;{{date}}</p>
+			<p><b>Duration:</b>&nbsp;&nbsp;&nbsp;{{duration}} minutes</p>
+			<p><b>Status:</b>&nbsp;&nbsp;&nbsp;{{status}}</p>
+		</div>
+	</div>
+	<div class="panel-footer text-center">
+		<button class="btn btn-primary" type="button" name="button" ng-click="takeAssessment(id)" ng-disabled="!showTakeAssessment(rawDate)">Take Exam</button>
+	</div>
+</div>

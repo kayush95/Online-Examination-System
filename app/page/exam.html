@@ -1,0 +1,158 @@
+
+<div class="container" ng-controller="ExaminationController">
+
+    <!-- Modal -->
+    <div class="modal fade" id="logoutModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Logout</h4>
+                </div>
+                <div class="modal-body text-center" style="font-size: medium;">
+                    <p>You are in a middle of taking an exam.</p>
+                    <p>Logging out will automatically finish your exam.</p>
+                </div>
+                <div class="modal-footer" style="text-align:center;">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-success" ng-click="logout()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="submitModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon glyphicon-ok-circle"></span>&nbsp;&nbsp;Finish Exam</h4>
+                </div>
+                <div class="modal-body text-center" style="font-size: medium;">
+                    <p ng-show="unansweredQuestions">You haven't answered all the questions,</p>
+                    <p>Are you sure to finish your exam?</p>
+                </div>
+                <div class="modal-footer" style="text-align:center;">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-success" ng-click="submitTest()">Finish Exam</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="text-center">
+                <p style="font-size: 20px">Hi, {{loggedInUser.firstName}} {{loggedInUser.lastName}}!</p>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#logoutModal">Logout</button>
+            </div>
+        </div>
+        <div class="panel-body" >
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="text-center">
+                        <p style="font-size: 20px">{{assessment.name}}</p>
+                        <exam-timer duration="test.duration" submit-test="submitTest()"></exam-timer>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row text-center">
+                        <div  class="col-md-4">
+                            <div style="color: green; font-size: 18px;">
+                                Answered Questions :
+                                <span style="font-size: 22px;">{{answeredQuestions}}</span>
+                            </div>
+                        </div>
+                        <div  class="col-md-4">
+                            <div style="font-size: 18px;">
+                                Total Questions :
+                                <span style="font-size: 22px;">{{totalQuestions}}</span>
+                            </div>
+                        </div>
+                        <div  class="col-md-4">
+                            <div style="color: red; font-size: 18px;">
+                                Unanswered Questions:
+                                <span style="font-size: 22px;">{{unansweredQuestions}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div  class=" col-md-4">
+                            <div class=" well exam-details-panel">
+                                <div style="margin:20px; height: 80px;">
+                                    <div class="radio">
+                                        <label><input type="radio" ng-change="questionsFilterChange()" ng-model = "questionsFilter" name="questionsFilter" value="All">All Questions</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" ng-change="questionsFilterChange()" ng-model = "questionsFilter" name="questionsFilter" value="Unanswered">Unanswered Questions</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" ng-change="questionsFilterChange()" ng-model = "questionsFilter" name="questionsFilter" value="Answered">Answered Questions</label>
+                                    </div>
+                                </div>
+                                <div style="border-top: 2px solid #cecece; border-bottom: 2px solid #cecece; padding: 5px; height: 350px; overflow: scroll;">
+                                    <div class="side-bar-question" ng-repeat="question in questions|filter:myFilter" ng-click="questionClicked(question.index)">
+                                        {{question.index+1}}.&nbsp;&nbsp;{{question.text}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="col-md-8">
+                            <div class=" question-panel">
+                                <div>
+                                    <div style="margin: 20px; padding:10px;">
+                                        <h3>{{currentQuestionIndex+1}}.&nbsp;{{questions[currentQuestionIndex].text}}</h3>
+                                    </div>
+
+                                    <div style="margin: 20px; padding:10px; font-size: 18px">
+                                        <div style="margin: 5px; padding:5px;" class="radio" ng-repeat="option in questions[currentQuestionIndex].options">
+                                            <label>
+                                                <input ng-change="optionSelected(currentQuestionIndex)" type="radio" name="submittedChoice" ng-model="questions[currentQuestionIndex].submittedChoice" ng-value="option.id">
+                                                {{option.text}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <div class="row text-center">
+                        <div  class="col-md-4">
+                            <button type="button" ng-click="previous()" ng-disabled = "previousDisabled" class=" btn btn-primary">Previous</button>
+                        </div>
+                        <div  class="col-md-4">
+                            <button style="font-size:20px;"type="button" data-toggle="modal" data-target="#submitModal" class=" btn btn-success">Finish Exam</button>
+                        </div>
+                        <div  class="col-md-4">
+                            <button type="button" ng-click="next()" ng-disabled = "nextDisabled" class=" btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

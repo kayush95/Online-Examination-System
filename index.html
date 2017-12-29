@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="../lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../lib/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/tether-shepherd/dist/css/shepherd-theme-arrows.css" />
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="app/css/examinee.css">
+    <link rel="stylesheet" type="text/css" href="app/css/admin.css">
+    <link rel="stylesheet" type="text/css" href="app/css/exam.css">
+
+
+    <script type="text/javascript" src="../lib/angular/angular.js"></script>
+    <script type="text/javascript" src="../lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="../lib/angular-cookies/angular-cookies.js"></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+
+
+    <script type="text/javascript" src="app/components/authenticate.ctrl.js"></script>
+    <script type="text/javascript" src="app/components/examinee.ctrl.js"></script>
+    <script type="text/javascript" src="app/components/examination.ctrl.js"></script>
+    <script type="text/javascript" src="app/components/admin.ctrl.js"></script>
+
+    <script type="text/javascript" src="app/service/admin.srv.js"></script>
+    <script type="text/javascript" src="app/service/authenticate.srv.js"></script>
+    <script type="text/javascript" src="app/service/examination.srv.js"></script>
+    <script type="text/javascript" src="app/components/examinee.ctrl.js"></script>
+    <script type="text/javascript" src="app/service/examinee.srv.js"></script>
+    <script type="text/javascript" src="app/directive/card.drv.js"></script>
+    <script type="text/javascript" src="app/directive/timer.drv.js"></script>
+
+
+    <script src="lib/tether/dist/js/tether.min.js"></script>
+    <script src="lib/tether-shepherd/dist/js/shepherd.min.js"></script>
+
+    <script type="text/javascript" src="app/config/main.cfg.js"></script>
+    <script type="text/javascript" src="lib/simple-excel/simple-excel.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="lib/dirPagination.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <script type="text/javascript" src="/lib/angular-google-chart-1.0.0-beta.1/ng-google-chart.js"></script>
+    <script type="text/javascript" src="/lib/angular-google-chart-1.0.0-beta.1/ng-google-chart.min.js"></script>
+    <script type="text/javascript" src=""></script>
+
+    <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+
+
+
+    <title>OES</title>
+</head>
+<body ng-app="main_module">
+
+    <div class="jumbotron text-center">
+        <h2>Online Examination System</h2>
+        <p>Assessment of knowledge is critical to any learning process!</p>
+    </div>
+
+    <div class="ng-view-div" ng-view></div>
+    <!-- <script>
+
+
+    (function() {
+
+
+
+    var examineeTour, adminTour;
+
+    examineeTour = new Shepherd.Tour({});
+
+    examineeTour.on('start', function() {
+    console.log("Shepherd starts");
+    $(".ng-view-div").css('opacity', '0.1');
+});
+examineeTour.on('complete', function() {
+console.log("Shepherd ends");
+});
+
+examineeTour.addStep('first-step', {
+text: 'This step is attached to the bottom of the <code>.example-css-selector</code> element.',
+attachTo: '.jumbotron bottom',
+classes: 'shepherd-theme-arrows',
+buttons: [
+{
+text: 'Exit',
+action: examineeTour.cancel
+},
+{
+text: 'Next',
+action: examineeTour.next
+}
+],
+showCancelLink: true,
+scrollTo: true
+});
+
+examineeTour.addStep('second-step', {
+text: 'Your overall performance is shown via beautiful pie chart.<br/>You can see here, how you did on your tests.',
+attachTo: '#performance top',
+classes: 'shepherd-theme-arrows',
+buttons: [
+{
+text: 'Exit',
+action: examineeTour.cancel
+},
+{
+text: 'Next',
+action: examineeTour.next
+}
+],
+showCancelLink: true,
+scrollTo: true
+}).on('show',function() {
+$("#performance").css('opacity', '0');
+});
+
+examineeTour.start();
+
+})();
+</script> -->
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+/*
+.icons {
+	padding-left: 40px;
+	padding-right: 40px;
+}*/
+
+
+.img {
+	height: 150px;
+	width: 150px;
+}
+
+.data {
+	font-size: 20px;
+	padding-left: 10px;
+}
+.container {
+	padding-top: 15px;
+}
+
+.table td {
+   text-align: center;
+}
+
+
+#filterAssessments {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 6px 12px 6px 12px;
+	margin: 10px;
+}

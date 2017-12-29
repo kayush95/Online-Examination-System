@@ -1,0 +1,20 @@
+.question-panel{
+    border:1px solid #cecece;
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    overflow: scroll;
+}
+.exam-details-panel{
+    border:1px solid #cecece;
+    height: 500px;
+}
+.side-bar-question{
+    margin : 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+.side-bar-question:hover{
+    font-size: 16px;
+    cursor: pointer;
+}

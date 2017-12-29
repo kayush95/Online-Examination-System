@@ -1,0 +1,1060 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Neha",
+      "lastName": "Singhal",
+      "email": "neha@gmail.com",
+      "password": "neha",
+      "role": "admin",
+      "gender": "female",
+      "memberSince": 1501341124981
+    },
+    {
+      "id": 2,
+      "firstName": "Vishwas",
+      "lastName": "Jain",
+      "email": "vishwas@gmail.com",
+      "password": "vishwas",
+      "role": "examinee",
+      "gender": "male",
+      "memberSince": 1501341124981
+    },
+    {
+      "id": 3,
+      "firstName": "Shilpi",
+      "lastName": "Gautam",
+      "email": "shilpi@gmail.com",
+      "password": "shilpi",
+      "role": "examinee",
+      "gender": "female",
+      "memberSince": 1501341124981
+    },
+    {
+      "id": 4,
+      "firstName": "Arpit",
+      "lastName": "Thapar",
+      "email": "arpit@gmail.com",
+      "password": "arpit",
+      "role": "examinee",
+      "gender": "male",
+      "memberSince": 1501341124981
+    },
+    {
+      "id": 5,
+      "firstName": "Kumar",
+      "lastName": "Ayush",
+      "email": "ayush@gmail.com",
+      "password": "ayush",
+      "role": "admin",
+      "gender": "male",
+      "memberSince": 1501341124981
+    }
+  ],
+  "assessments": [
+    {
+      "name": "Java Core",
+      "id": 1
+    },
+    {
+      "name": "Javascript",
+      "id": 2
+    }
+  ],
+  "questions": [
+    {
+      "assessmentid": 1,
+      "text": "What if I write static public void instead of public static void?",
+      "options": [
+        {
+          "id": 1,
+          "text": "Program compiles and runs properly."
+        },
+        {
+          "id": 2,
+          "text": "Compilation Error"
+        },
+        {
+          "id": 3,
+          "text": "Runtime Error"
+        },
+        {
+          "id": 4,
+          "text": "Compile Successfully but Runtime Error"
+        }
+      ],
+      "correct": 1,
+      "id": 1
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which of these keywords is used to make a class?",
+      "options": [
+        {
+          "id": 1,
+          "text": "class"
+        },
+        {
+          "id": 2,
+          "text": "contruct"
+        },
+        {
+          "id": 3,
+          "text": "int"
+        },
+        {
+          "id": 4,
+          "text": "None of the above"
+        }
+      ],
+      "correct": 1,
+      "id": 2
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which of the following is a valid declaration of an object of class Box?",
+      "options": [
+        {
+          "id": 1,
+          "text": "Box obj = new Box();"
+        },
+        {
+          "id": 2,
+          "text": "Box obj = new Box;"
+        },
+        {
+          "id": 3,
+          "text": "obj = new Box();"
+        },
+        {
+          "id": 4,
+          "text": "new Box obj;"
+        }
+      ],
+      "correct": 1,
+      "id": 3
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which of these operators is used to allocate memory for an object?",
+      "options": [
+        {
+          "id": 1,
+          "text": "new"
+        },
+        {
+          "id": 2,
+          "text": "alloc"
+        },
+        {
+          "id": 3,
+          "text": "malloc"
+        },
+        {
+          "id": 4,
+          "text": "give"
+        }
+      ],
+      "correct": 1,
+      "id": 4
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which of these keyword can be used in subclass to call the constructor of superclass?",
+      "options": [
+        {
+          "id": 1,
+          "text": "super"
+        },
+        {
+          "id": 2,
+          "text": "this"
+        },
+        {
+          "id": 3,
+          "text": "extends"
+        },
+        {
+          "id": 4,
+          "text": "extend"
+        }
+      ],
+      "correct": 1,
+      "id": 5
+    },
+    {
+      "assessmentid": 1,
+      "text": "What is the process of defining a method in subclass having same name & type signature as a method in its superclass?",
+      "options": [
+        {
+          "id": 1,
+          "text": "Method overriding"
+        },
+        {
+          "id": 2,
+          "text": "Method overloading"
+        },
+        {
+          "id": 3,
+          "text": "Method Hiding"
+        },
+        {
+          "id": 4,
+          "text": "None of the above"
+        }
+      ],
+      "correct": 1,
+      "id": 4
+    },
+    {
+      "assessmentid": 5,
+      "text": "What is your name ?",
+      "options": [
+        {
+          "id": 1,
+          "text": "A"
+        },
+        {
+          "id": 2,
+          "text": "B"
+        },
+        {
+          "id": 3,
+          "text": "C"
+        },
+        {
+          "id": 4,
+          "text": "D"
+        }
+      ],
+      "correct": 2,
+      "id": 6
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which of these keywords can be used to prevent Method overriding?",
+      "options": [
+        {
+          "id": 1,
+          "text": "final"
+        },
+        {
+          "id": 2,
+          "text": "protected"
+        },
+        {
+          "id": 3,
+          "text": "constant"
+        },
+        {
+          "id": 4,
+          "text": "static"
+        }
+      ],
+      "correct": 1,
+      "id": 7
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which of these is correct way of calling a constructor having no parameters, of superclass A by subclass B?",
+      "options": [
+        {
+          "id": 1,
+          "text": "super();"
+        },
+        {
+          "id": 2,
+          "text": "super.A()"
+        },
+        {
+          "id": 3,
+          "text": "supeclass()"
+        },
+        {
+          "id": 4,
+          "text": "super(void)"
+        }
+      ],
+      "correct": 1,
+      "id": 8
+    },
+    {
+      "assessmentid": 2,
+      "text": "What is the scope of an external variable?",
+      "options": [
+        {
+          "id": 1,
+          "text": "From the point of declaration to the end of the file being compiled"
+        },
+        {
+          "id": 2,
+          "text": "Any source file in a program"
+        },
+        {
+          "id": 3,
+          "text": "From the point of declaration to the end of the file in which it is defined"
+        },
+        {
+          "id": 4,
+          "text": "Whole source file in which it is defined"
+        }
+      ],
+      "correct": 1,
+      "id": 9
+    },
+    {
+      "assessmentid": 2,
+      "text": "What is the scope of a function?",
+      "options": [
+        {
+          "id": 1,
+          "text": "From the point of declaration to the end of the file being compiled"
+        },
+        {
+          "id": 2,
+          "text": "From the point of declaration to the end of the file in which it is defined"
+        },
+        {
+          "id": 3,
+          "text": "Any source file in a program"
+        },
+        {
+          "id": 4,
+          "text": "Whole source file in which it is defined"
+        }
+      ],
+      "correct": 1,
+      "id": 10
+    },
+    {
+      "assessmentid": 2,
+      "text": "Which of the following are generated from char pointer?",
+      "options": [
+        {
+          "id": 1,
+          "text": "char *string = “Hello.”;"
+        },
+        {
+          "id": 2,
+          "text": "char *string;     scanf(“%s”, string);"
+        },
+        {
+          "id": 3,
+          "text": "char string[] = “Hello.”;"
+        },
+        {
+          "id": 4,
+          "text": "Both (a) and (c)."
+        }
+      ],
+      "correct": 1,
+      "id": 11
+    },
+    {
+      "assessmentid": 2,
+      "text": "Which of the following declaration are illegal?",
+      "options": [
+        {
+          "id": 1,
+          "text": "int a[][] = {{1, 2, 3}, {2, 3, 4, 5}};"
+        },
+        {
+          "id": 2,
+          "text": "int *a[] = {{1, 2, 3}, {2, 3, 4, 5}};"
+        },
+        {
+          "id": 3,
+          "text": "int a[4][4] = {{1, 2, 3}, {2, 3, 4, 5}};"
+        },
+        {
+          "id": 4,
+          "text": "Both (a) and (b)."
+        }
+      ],
+      "correct": 1,
+      "id": 12
+    },
+    {
+      "assessmentid": 2,
+      "text": "Which of the following function with ellipsis are illegal?",
+      "options": [
+        {
+          "id": 1,
+          "text": "void func(…);"
+        },
+        {
+          "id": 2,
+          "text": "void func(int, …);"
+        },
+        {
+          "id": 3,
+          "text": "void func(int, int, …);"
+        },
+        {
+          "id": 4,
+          "text": "Both (a) and (c)"
+        }
+      ],
+      "correct": 1,
+      "id": 13
+    },
+    {
+      "assessmentid": 2,
+      "text": "Which of the following data-types are promoted when used as a parameter for an ellipsis?",
+      "options": [
+        {
+          "id": 1,
+          "text": "char"
+        },
+        {
+          "id": 2,
+          "text": "short"
+        },
+        {
+          "id": 3,
+          "text": "int"
+        },
+        {
+          "id": 4,
+          "text": "None of the above"
+        }
+      ],
+      "correct": 1,
+      "id": 14
+    },
+    {
+      "assessmentid": 2,
+      "text": "Which header file includes a function for variable number of arguments?",
+      "options": [
+        {
+          "id": 1,
+          "text": "stdarg.h"
+        },
+        {
+          "id": 2,
+          "text": "stdlib.h"
+        },
+        {
+          "id": 3,
+          "text": "ctype.h"
+        },
+        {
+          "id": 4,
+          "text": "Both a and b"
+        }
+      ],
+      "correct": 1,
+      "id": 15
+    },
+    {
+      "assessmentid": 3,
+      "text": "AngularJS applications are a mix of . . . . . .",
+      "options": [
+        {
+          "id": 1,
+          "text": "HTML and JavaScript"
+        },
+        {
+          "id": 2,
+          "text": "HTML and AngularScript"
+        },
+        {
+          "id": 3,
+          "text": "HTML and CrossScript"
+        },
+        {
+          "id": 4,
+          "text": "HTML and PHP"
+        }
+      ],
+      "correct": 1,
+      "id": 16
+    },
+    {
+      "assessmentid": 3,
+      "text": "AngularJS is based on the . . . . . . pattern.",
+      "options": [
+        {
+          "id": 1,
+          "text": "MVC"
+        },
+        {
+          "id": 2,
+          "text": "VMC"
+        },
+        {
+          "id": 3,
+          "text": "MCV"
+        },
+        {
+          "id": 4,
+          "text": "CVM"
+        }
+      ],
+      "correct": 1,
+      "id": 17
+    },
+    {
+      "assessmentid": 3,
+      "text": "There is a controller which takes single parameter. We call it . . . . . parameter.",
+      "options": [
+        {
+          "id": 1,
+          "text": "$scope"
+        },
+        {
+          "id": 2,
+          "text": "$param"
+        },
+        {
+          "id": 3,
+          "text": "$control"
+        },
+        {
+          "id": 4,
+          "text": "$scont"
+        }
+      ],
+      "correct": 1,
+      "id": 18
+    },
+    {
+      "assessmentid": 1,
+      "text": "What is Java?",
+      "options": [
+        {
+          "id": 1,
+          "text": "Framework"
+        },
+        {
+          "id": 2,
+          "text": "Language"
+        },
+        {
+          "id": 3,
+          "text": "Script"
+        },
+        {
+          "id": 4,
+          "text": "None of the above"
+        }
+      ],
+      "correct": 2,
+      "id": 19
+    },
+    {
+      "assessmentid": 2,
+      "text": "What is JS?",
+      "options": [
+        {
+          "id": 1,
+          "text": "Script"
+        },
+        {
+          "id": 2,
+          "text": "Language"
+        },
+        {
+          "id": 3,
+          "text": "bug"
+        },
+        {
+          "id": 4,
+          "text": "feature"
+        }
+      ],
+      "correct": 1,
+      "id": 20
+    },
+    {
+      "assessmentid": 1,
+      "text": "Which header file includes a function for variable number of arguments?",
+      "options": [
+        {
+          "id": 1,
+          "text": "stdarg.h"
+        },
+        {
+          "id": 2,
+          "text": "stdlib.h"
+        },
+        {
+          "id": 3,
+          "text": "ctype.h"
+        },
+        {
+          "id": 4,
+          "text": "Both a and b"
+        }
+      ],
+      "correct": 1,
+      "id": 21
+    },
+    {
+      "assessmentid": 1,
+      "text": "AngularJS applications are a mix of . . . . . .",
+      "options": [
+        {
+          "id": 1,
+          "text": "HTML and JavaScript"
+        },
+        {
+          "id": 2,
+          "text": "HTML and AngularScript"
+        },
+        {
+          "id": 3,
+          "text": "HTML and CrossScript"
+        },
+        {
+          "id": 4,
+          "text": "HTML and PHP"
+        }
+      ],
+      "correct": 1,
+      "id": 22
+    },
+    {
+      "assessmentid": 1,
+      "text": "AngularJS is based on the . . . . . . pattern.",
+      "options": [
+        {
+          "id": 1,
+          "text": "MVC"
+        },
+        {
+          "id": 2,
+          "text": "VMC"
+        },
+        {
+          "id": 3,
+          "text": "MCV"
+        },
+        {
+          "id": 4,
+          "text": "CVM"
+        }
+      ],
+      "correct": 1,
+      "id": 23
+    },
+    {
+      "assessmentid": 1,
+      "text": "What is Java?",
+      "options": [
+        {
+          "id": 1,
+          "text": "Framework"
+        },
+        {
+          "id": 2,
+          "text": "Language"
+        },
+        {
+          "id": 3,
+          "text": "Script"
+        },
+        {
+          "id": 4,
+          "text": "None of the above"
+        }
+      ],
+      "correct": 2,
+      "id": 24
+    }
+  ],
+  "tests": [
+    {
+      "id": 1501341136022,
+      "examDate": 1501341124981,
+      "notificationDate": 1501341124981,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501341152805,
+      "examDate": 1501341147361,
+      "notificationDate": 1501341147361,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501341157250,
+      "examDate": 1501341147361,
+      "notificationDate": 1501341147361,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501341161998,
+      "examDate": 1501341147361,
+      "notificationDate": 1501341147361,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501341695453,
+      "examDate": 1501341689916,
+      "notificationDate": 1501341689916,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501341702382,
+      "examDate": 1501341689916,
+      "notificationDate": 1501341689916,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501341708428,
+      "examDate": 1501341689916,
+      "notificationDate": 1501341689916,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501341712568,
+      "examDate": 1501341689916,
+      "notificationDate": 1501341689916,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501342060561,
+      "examDate": 1501342052714,
+      "notificationDate": 1501342052714,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501342949878,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501342954521,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501342958015,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501342961445,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501342964778,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501342968248,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501342971755,
+      "examDate": 1501342945214,
+      "notificationDate": 1501342945214,
+      "assessmentid": 1,
+      "duration": "5"
+    },
+    {
+      "id": 1501351618617,
+      "examDate": 1501351611978,
+      "notificationDate": 1501351611978,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501351890420,
+      "examDate": 1501351835897,
+      "notificationDate": 1501351835897,
+      "assessmentid": 2,
+      "duration": 5
+    },
+    {
+      "id": 1501351941555,
+      "examDate": 1501956715280,
+      "notificationDate": 1501351915280,
+      "assessmentid": 2,
+      "duration": 5
+    },
+    {
+      "id": 1501592146984,
+      "examDate": 1501592139002,
+      "notificationDate": 1501592139002,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501596547379,
+      "examDate": 1501596541645,
+      "notificationDate": 1501596541645,
+      "assessmentid": 1,
+      "duration": 5
+    },
+    {
+      "id": 1501596551011,
+      "examDate": 1501596541645,
+      "notificationDate": 1501596541645,
+      "assessmentid": 2,
+      "duration": "5"
+    },
+    {
+      "id": 1501597087634,
+      "examDate": 1501597082179,
+      "notificationDate": 1501597082179,
+      "assessmentid": 1,
+      "duration": 5
+    }
+  ],
+  "distribution": [
+    {
+      "testsid": 1501341136022,
+      "userid": 1,
+      "status": "complete",
+      "score": 4,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 9,
+      "performance": "Good",
+      "id": 1
+    },
+    {
+      "testsid": 1501341152805,
+      "userid": 1,
+      "status": "complete",
+      "score": 4,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 9,
+      "performance": "Good",
+      "id": 2
+    },
+    {
+      "testsid": 1501341157250,
+      "userid": 1,
+      "status": "complete",
+      "score": 9,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 9,
+      "performance": "Excellent",
+      "id": 3
+    },
+    {
+      "testsid": 1501341161998,
+      "userid": 1,
+      "status": "complete",
+      "score": 1,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 1,
+      "performance": "Poor",
+      "id": 4
+    },
+    {
+      "testsid": 1501341695453,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 5
+    },
+    {
+      "testsid": 1501341702382,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 6
+    },
+    {
+      "testsid": 1501341708428,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 7
+    },
+    {
+      "testsid": 1501341712568,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 8
+    },
+    {
+      "testsid": 1501342060561,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 9
+    },
+    {
+      "testsid": 1501342949878,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 10
+    },
+    {
+      "testsid": 1501342954521,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 11
+    },
+    {
+      "testsid": 1501342958015,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 12
+    },
+    {
+      "testsid": 1501342961445,
+      "userid": 1,
+      "status": "complete",
+      "score": 1,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 3,
+      "performance": "Poor",
+      "id": 13
+    },
+    {
+      "testsid": 1501342964778,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 14
+    },
+    {
+      "testsid": 1501342968248,
+      "userid": 1,
+      "status": "complete",
+      "score": 8,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 9,
+      "performance": "Excellent",
+      "id": 15
+    },
+    {
+      "testsid": 1501342971755,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 16
+    },
+    {
+      "testsid": 1501351618617,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 17
+    },
+    {
+      "testsid": 1501351890420,
+      "userid": 1,
+      "status": "complete",
+      "score": 1,
+      "totalQuestionsCount": 8,
+      "questionAnswered": 3,
+      "performance": "Poor",
+      "id": 18
+    },
+    {
+      "testsid": 1501351941555,
+      "userid": 1,
+      "status": "incomplete",
+      "score": 0,
+      "totalQuestionsCount": 8,
+      "questionAnswered": 0,
+      "id": 19
+    },
+    {
+      "testsid": 1501592146984,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 20
+    },
+    {
+      "testsid": 1501596547379,
+      "userid": 1,
+      "status": "complete",
+      "score": 8,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 9,
+      "performance": "Excellent",
+      "id": 21
+    },
+    {
+      "testsid": 1501596551011,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 8,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 22
+    },
+    {
+      "testsid": 1501597087634,
+      "userid": 1,
+      "status": "complete",
+      "score": 0,
+      "totalQuestionsCount": 9,
+      "questionAnswered": 0,
+      "performance": "Poor",
+      "id": 23
+    }
+  ]
+}

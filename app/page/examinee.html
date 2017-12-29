@@ -1,0 +1,205 @@
+
+<div class="container" ng-controller="LogoutController">
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="logoutModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Logout</h4>
+                </div>
+                <div class="modal-body text-center" style="font-size: medium;">
+                    <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="modal-footer" style="text-align:center;">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-success" ng-click="logout()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="takeAssessmentModal" role="dialog">
+        <div class="modal-dialog" style="margin-top:15%;">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-education"></span>&nbsp;&nbsp;Take Exam</h4>
+                </div>
+                <div class="modal-body" style="font-size: medium;">
+                    <ul >
+                        <li>You are about to begin the exam.</li>
+                        <li>There is a specific time alloted to every exam.</li>
+                        <li>Either you can finish the exam before the timer expires by clicking on <b>Finish Exam</b></li>
+                        <li>Or the exam will automatically get finished, submitting your responses when the timer expires.</li>
+                        <li>If, during the examination, you try to <b>close/reload</b> the examination window, you'll get a warning to stay on the exam page.</li>
+                        <li>Ignoring this will <b>close/reload</b> the window, also finishing the exam and submitting your reponses.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer" style="text-align:center;">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" style="font-size: medium;" class="btn btn-default btn-success" ng-click="takeAssessment()">Take Exam</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+            <div class="text-center">
+                <p style="font-size: 20px">Hi, {{loggedInUser.firstName}} {{loggedInUser.lastName}}!</p>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#logoutModal">Logout</button>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row" style="height: 300px; " ng-controller="ExamineeData">
+                <div class="col-md-4" style="height:300px;">
+                    <div class="well" style="height:100%; margin:0px; overflow-y:scroll">
+                        <div class="text-center" style="font-family: monospace; font-size: large; ">
+                            <img ng-src="image/{{user.gender}}.jpg"/ class="img">
+                            <br />
+                            <br />
+                            <b>Name: </b>{{user.firstName}} {{user.lastName}}
+                            <br/>
+                            <b>Email:</b> {{user.email}}
+                            <br/>
+                            <b>Member Since:</b> {{user.memberSince}}
+                            <br/>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div id="performance" class="col-md-8" style="height:300px;">
+                    <div class="well" style="height:100%; margin:0px;" >
+                        <div google-chart chart="myChartObject" style="height: 100%; width:100%;" ng-show="performances.length"></div>
+                        <div class="text-center" ng-show="!performances.length" style=" margin:15%;">
+                            <h4 style="color: maroon; font: caption;">Take an assessment to see your performance pie chart here!</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-7" ng-controller="ExamineeAssessments">
+                    <div class="panel panel-success">
+                        <div class="panel-heading text-center">
+                            <div class="text-center" style="font-size: 20px">
+                                Upcoming Assessments
+                            </div>
+                        </div>
+                        <div class="panel-body" >
+
+                            <div class="row text-center" ng-show = "showHeading">
+                                <div style="margin: 10px;">
+                                    <label>Filter Assesments:</label><input id="filterAssessments" type="text" placeholder="Search here"  ng-model="searchAssessmentsText">
+                                </div>
+                                <div style="max-height: 500px; overflow-y:scroll;">
+                                    <div class="col-md-6" ng-repeat="assessment in assessments | orderBy:'rawDate':false | filter:searchAssessmentsText " ng-show="showAssessment(assessment.notificationDate)">
+                                        <card-view
+                                        name="assessment.name"
+                                        date="assessment.examDate"
+                                        duration="assessment.duration"
+                                        status="assessment.status"
+                                        take-assessment = "openModalConfirmation(assessment.distributionId)"
+                                        show-take-assessment = "showTakeAssessment(assessment.rawDate)"></card-view>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center" ng-show="!showHeading">
+                                <h4>No upcoming assessments for you !</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5" ng-controller="ResultTablePagenation">
+                    <div class="panel panel-danger" ng-init="NoOfResults='5'">
+                        <div class="panel-heading text-center">
+                            <div class="text-center" style="font-size: 20px">
+                                Completed Assessments
+                            </div>
+                        </div>
+                        <div class="panel-body" >
+
+
+                            <div class="text-center" ng-show="totalResults">
+                                <div style="margin: 10px;">
+                                    <label>Filter Assesments:</label><input id="filterAssessments" placeholder="Search here" ng-model="searchAssessmentsText" ng-change="filterAssessments()">
+                                </div>
+                                <div style="max-height: 400px; overflow-y:scroll;">
+                                    <table class="table table-hover table-bordered table-responsive">
+                                        <thead>
+                                            <tr class="info">
+                                                <th ng-click="sort('name')">ExamName
+                                                    <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                                                </th>
+                                                <th ng-click="sort('date')">ExamDate
+                                                    <span class="glyphicon sort-icon" ng-show="sortKey=='date'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                                                </th>
+                                                <th ng-click="sort('score')">Score
+                                                    <span class="glyphicon sort-icon" ng-show="sortKey=='score'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                                                </th>
+                                                <th ng-click="sort('performance')">Performance
+                                                    <span class="glyphicon sort-icon" ng-show="sortKey=='performance'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                                                </th>
+                                                <!-- <th >Performance</th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="active" dir-paginate="result in results|orderBy:sortKey:reverse|itemsPerPage: NoOfResults">
+                                                <td>{{result.name}}</td>
+                                                <td>{{result.date}}</td>
+                                                <td>{{result.score}}</td>
+                                                <td>{{result.performance}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="text-center" ng-show="!totalResults">
+                                <h4>No results to show!</h4>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <div ng-show="results.length > 5">
+                                <dir-pagination-controls max-size="8" direction-links="true" boundary-links="true" ></dir-pagination-controls>
+                                <select class="form-control" ng-model="NoOfResults" style="width: 50%; margin-left:25%;">
+                                    <option disabled selected value>Results per page</option>
+                                    <option value="5">5</option>
+                                    <option ng-show="results.length > 5" value="6">6</option>
+                                    <option ng-show="results.length > 6" value="7">7</option>
+                                    <option ng-show="results.length > 7" value="8">8</option>
+                                    <!-- <option ng-repeat="result in results" value="{{result.selectOption}}">{{result.selectOption}}</option> -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
