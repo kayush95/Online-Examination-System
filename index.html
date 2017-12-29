@@ -62,67 +62,7 @@
     </div>
 
     <div class="ng-view-div" ng-view></div>
-    <!-- <script>
 
-
-    (function() {
-
-
-
-    var examineeTour, adminTour;
-
-    examineeTour = new Shepherd.Tour({});
-
-    examineeTour.on('start', function() {
-    console.log("Shepherd starts");
-    $(".ng-view-div").css('opacity', '0.1');
-});
-examineeTour.on('complete', function() {
-console.log("Shepherd ends");
-});
-
-examineeTour.addStep('first-step', {
-text: 'This step is attached to the bottom of the <code>.example-css-selector</code> element.',
-attachTo: '.jumbotron bottom',
-classes: 'shepherd-theme-arrows',
-buttons: [
-{
-text: 'Exit',
-action: examineeTour.cancel
-},
-{
-text: 'Next',
-action: examineeTour.next
-}
-],
-showCancelLink: true,
-scrollTo: true
-});
-
-examineeTour.addStep('second-step', {
-text: 'Your overall performance is shown via beautiful pie chart.<br/>You can see here, how you did on your tests.',
-attachTo: '#performance top',
-classes: 'shepherd-theme-arrows',
-buttons: [
-{
-text: 'Exit',
-action: examineeTour.cancel
-},
-{
-text: 'Next',
-action: examineeTour.next
-}
-],
-showCancelLink: true,
-scrollTo: true
-}).on('show',function() {
-$("#performance").css('opacity', '0');
-});
-
-examineeTour.start();
-
-})();
-</script> -->
 </body>
 
 </html>

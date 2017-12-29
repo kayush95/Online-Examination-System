@@ -6,7 +6,7 @@
       "lastName": "Singhal",
       "email": "neha@gmail.com",
       "password": "neha",
-      "role": "admin",
+      "role": "examinee",
       "gender": "female",
       "memberSince": 1501341124981
     },
@@ -1010,10 +1010,11 @@
     {
       "testsid": 1501351941555,
       "userid": 1,
-      "status": "incomplete",
+      "status": "complete",
       "score": 0,
       "totalQuestionsCount": 8,
       "questionAnswered": 0,
+      "performance": "Poor",
       "id": 19
     },
     {
