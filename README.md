@@ -28,13 +28,13 @@ How to Run
 ![alt text](screenshots/SignIn.png "Sign In Page")
 
 ### Admin
-![alt text](screenshots/CreateAssessment.png "Create Assessment") 
+![alt text](screenshots/CreateAssessment.png "Create Assessment")
 ![alt text](screenshots/AddQuestion.png "Add Question")
-![alt text](screenshots/UploadQuestions.png "Upload Questions")   
+![alt text](screenshots/UploadQuestions.png "Upload Questions")
 ![alt text](screenshots/Report.png "Examination Report")
 ![alt text](screenshots/Schedule.png "Schedule Examination")
 
 ### Examinee
-![alt text](screenshots/Examinee.png "Examinee") 
-![alt text](screenshots/TakeExam.png "Take Exam") 
-![alt text](screenshots/Exam.png "Exam") 
+![alt text](screenshots/Examinee.png "Examinee")
+![alt text](screenshots/TakeExam.png "Take Exam")
+![alt text](screenshots/Exam.png "Exam")
