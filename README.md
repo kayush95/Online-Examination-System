@@ -6,7 +6,12 @@ Users of OES are classified into two categories: Administrators and Students (Us
 
 How to Run
 -------------------
+
+* Install [npm](https://www.npmjs.com/get-npm). Install ```bower``` using ```npm install -g bower```.
+
 * Clone the repository.
+
+* Open terminal and move inside the project folder and run ```bower install```.
 
 * Install JSON server:
 
